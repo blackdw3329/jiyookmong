@@ -28,6 +28,7 @@
 	line-height:  50px;
 	border-radius: 5px;
 	background-color: gray;
+	z-index: -1;
 }
 
 .image-box {
@@ -37,26 +38,26 @@
 	bottom: 0%;
 	transform: translate(-50%,0%);
     width:750px;
-    height:300px;
+    height:500px;
     overflow:hidden;
     margin:0 auto;
+	z-index: 2
 }
 
 .fries-image {
 	position: absolute;
 	left: 60%;
 	bottom: 0%;
-	transform: translate(-50%,-30.6%);
+	transform: translate(-50%,-40%);
 	background-image: url("https://proxy.goorm.io/service/67bb058fae96ed7d200808e8_dFpDnz7OaqBYYYuKDXe.run.goorm.io/9080/file/load/fries.png?path=d29ya3NwYWNlJTJGYmxhY2tkdyUyRmZvb2QtaW1hZ2UlMkZmcmllcy5wbmc=&docker_id=dFpDnz7OaqBYYYuKDXe&secure_session_id=-du4WrcIEl_bB1OMIF8pqqolYokzS6h6");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 	width: 200px;
 	height: 200px;
 	border-radius: 5px;
-	text-align: center;
-	line-height: 50px;
-	margin: 10px auto;
 	z-index: 1;
+	transition-duration: 1s, 1s;
+	transition-property: width, height, z-index;
 }
 .hams-image {
 	position: absolute;
@@ -65,18 +66,20 @@
 	transform: translate(-50%,-30%);
 	background-image: url("https://proxy.goorm.io/service/67bb058fae96ed7d200808e8_dFpDnz7OaqBYYYuKDXe.run.goorm.io/9080/file/load/hams.png?path=d29ya3NwYWNlJTJGYmxhY2tkdyUyRmZvb2QtaW1hZ2UlMkZoYW1zLnBuZw==&docker_id=dFpDnz7OaqBYYYuKDXe&secure_session_id=-du4WrcIEl_bB1OMIF8pqqolYokzS6h6");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 	width: 200px;
 	height: 200px;
 	margin: 10px auto;
 	z-index: 2;
+	transition-duration: 1s, 1s;
+	transition-property: width, height, z-index;
 }
 
 .plate-image {
 	position: absolute;
 	left: 50%;
 	bottom: -50%;
-	transform: translate(-50%,0%);
+	transform: translate(-50%,-20%);
 	background-image: url("https://proxy.goorm.io/service/67bb058fae96ed7d200808e8_dFpDnz7OaqBYYYuKDXe.run.goorm.io/9080/file/load/plate.png?path=d29ya3NwYWNlJTJGYmxhY2tkdyUyRmZvb2QtaW1hZ2UlMkZwbGF0ZS5wbmc=&docker_id=dFpDnz7OaqBYYYuKDXe&secure_session_id=-du4WrcIEl_bB1OMIF8pqqolYokzS6h6");
     background-repeat: no-repeat;
     background-size: cover;
@@ -85,4 +88,15 @@
 	height: 500px;
 	margin: 10px auto;
 	/* background-color: yellow; */
+}
+
+.fries-image:hover { 
+	z-index: 10;
+	width: 260px;
+	height: 260px;
+}
+.hams-image:hover { 
+	z-index: 10;
+	width: 260px;
+	height: 260px;
 }
